@@ -27,10 +27,16 @@ public class MovieCompanyController {
         return "redirect:/";
     }
 
-    @PostMapping("add-location")
+    @PostMapping("/add-location")
     public String addTheaterLocation(
+            @RequestParam long companyid,
+            @RequestParam String locationName,
+            @RequestParam String address
     ) {
         System.out.println("Succesfully hit add-location controller");
+
+        TheaterLocation theaterLocation = theaterLocationRepository.save(new TheaterLocation(companyid, locationName, address));
+
         return "redirect:/";
     }
 }
