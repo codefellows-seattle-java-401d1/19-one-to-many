@@ -9,14 +9,18 @@ public class TheaterLocation {
     public int id;
     public int moviecompanyid;
     public String name;
-    public String location;
+    public String address;
 
     // required default constructor
-    public TheaterLocation() {}
+    public TheaterLocation(){
 
-    public TheaterLocation(int moviecompanyid, String name, String location) {
+    }
+
+    public TheaterLocation(String name, String address) {}
+
+    public TheaterLocation(int moviecompanyid, String name, String address) {
         this.moviecompanyid = moviecompanyid;
         this.name = name;
-        this.location = location;
+        this.address = address;
     }
 }

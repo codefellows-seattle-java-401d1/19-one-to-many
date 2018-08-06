@@ -21,7 +21,7 @@ public class HomepageController {
     @Autowired
     TheaterLocationRepository theaterLocationRepository;
 
-    @RequestMapping
+    @RequestMapping("/")
     public String homepage(Model model) {
         List<MovieCompany> companies = movieCompanyRepository.findAll();
         List<TheaterLocation> theaters = theaterLocationRepository.findAll();

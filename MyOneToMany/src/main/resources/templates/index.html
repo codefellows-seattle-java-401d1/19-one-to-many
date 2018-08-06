@@ -1,4 +1,4 @@
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Movie Theaters</title>
         <link rel="stylesheet" href="/styles/main.css">
@@ -14,7 +14,7 @@
             </form>
 
             <h4>Add new theater location</h4>
-            <form action="/moviecompanies/add-location" method="POST">
+            <form action="/theaterlocations/add-location" method="POST">
                 <label>
                     Company:
                     <select name="companyid">
@@ -23,7 +23,7 @@
                                 th:value="${company.id}">
                     </select>
                 </label>
-                <label>Theater Name: <input type="text" name="locationName" /></label>
+                <label>Theater Name: <input type="text" name="name" /></label>
                 <label>Location: <input type="text" name="address" /></label>
                 <input type="submit" />
             </form>
@@ -40,7 +40,7 @@
             <ul>
                 <li th:each="theater : ${theaters}">
                     <span th:text="${theater.name}" />
-                    @ <span th:text="${theater.location}" />
+                    @ <span th:text="${theater.address}" />
                 </li>
             </ul>
         </div>
