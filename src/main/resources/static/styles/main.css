@@ -1,0 +1,12 @@
+body {
+    background-color: lightsteelblue;
+}
+
+#main {
+    width: 50%;
+    background-color: white;
+    border: dashed black 2px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
